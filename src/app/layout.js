@@ -37,6 +37,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Add favicon link with fixed size */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+        {/* Metadata */}
+        <meta name="title" content={metadata.title} />
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+      </head>
       <body
         className={`${inter.className} dark:bg-[#030303] dark:text-white text-black bg-white`}
       >
